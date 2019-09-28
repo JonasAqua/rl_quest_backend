@@ -12,7 +12,7 @@ console.log(opts.secretOrKey)
 
 function passportConfig() {
     passport.use(new GoogleTokenStrategy({
-        clientID: '790306165997-qmd0kj4hujfhh5vd7c3dlkjnsnngjn0i.apps.googleusercontent.com',
+        clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET
     },
     function(accessToken, refreshToken, profile, done) {
